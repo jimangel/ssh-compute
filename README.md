@@ -112,6 +112,7 @@ jobs:
     - id: 'compute-ssh'
       uses: 'google-github-actions/ssh-compute@v2'
       with:
+        gcloud_component: beta # until WIF SSH is GA
         instance_name: 'example-instance'
         zone: 'us-central1-a'
         ssh_private_key: '${{ secrets.GCP_SSH_PRIVATE_KEY }}'
